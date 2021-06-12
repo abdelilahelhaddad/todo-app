@@ -109,5 +109,54 @@ body {
         }
       }
     }
+
+    #todoCollection {
+      width: 100%;
+      background-color: #FFF;
+      border-radius: 5px;
+      padding: 1rem 1.5rem;
+      margin-top: 1.2rem;
+
+      .todoItem {
+        display: flex;
+
+        #checkBTN {
+          -webkit-appearance: none;
+          width: 1.3rem;
+          height: 1.3rem;
+          background-color: #FFF;
+          border-radius: 50%;
+          vertical-align: middle;
+          border: 1px solid $Light-Grayish-Blue;
+          outline: none;
+          cursor: pointer;
+          margin-right: 1rem;
+
+          &:checked {
+            background: linear-gradient(130deg, #57ddff, #c058f3);
+            position: relative;
+
+            &::after {
+              position: absolute;
+              content: "";
+              top: 25%;
+              left: 20%;
+              width: 11px;
+              height: 9px;
+              background: url("./images/icon-check.svg") no-repeat;
+            }
+          }
+        }
+
+        .todoItemText {
+          width: 92%;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+        }
+      }
+
+      .todoFilter {}
+    }
   }
 }
