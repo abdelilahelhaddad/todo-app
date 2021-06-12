@@ -6,7 +6,8 @@ $font-weight-700:700;
 
 /* Color */
 $Bright-Blue: hsl(220, 98%, 61%);
-$Check-Background: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
+$Check-Background1: #57ddff;
+$Check-Background2:#c058f3;
 
 //Light Theme
 
@@ -18,13 +19,13 @@ $Very-Dark-Grayish-Blue: hsl(235, 19%, 35%);
 
 //Dark Theme
 
-$Very-Dark-Blue: hsl(235, 21%, 11%);
-$Very-Dark-Desaturated-Blue: hsl(235, 24%, 19%);
-$Light-Grayish-Blue: hsl(234, 39%, 85%);
-$Light-Grayish-Blue-hover: hsl(236, 33%, 92%);
-$Dark-Grayish-Blue: hsl(234, 11%, 52%);
-$Very-Dark-Grayish-Blue: hsl(233, 14%, 35%);
-$Very-Dark-Grayish-Blue: hsl(237, 14%, 26%);
+// $Very-Dark-Blue: hsl(235, 21%, 11%);
+// $Very-Dark-Desaturated-Blue: hsl(235, 24%, 19%);
+// $Light-Grayish-Blue: hsl(234, 39%, 85%);
+// $Light-Grayish-Blue-hover: hsl(236, 33%, 92%);
+// $Dark-Grayish-Blue: hsl(234, 11%, 52%);
+// $Very-Dark-Grayish-Blue: hsl(233, 14%, 35%);
+// $Very-Dark-Grayish-Blue: hsl(237, 14%, 26%);
 
 *,
 *::after,
@@ -37,4 +38,76 @@ $Very-Dark-Grayish-Blue: hsl(237, 14%, 26%);
 body {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 18px;
+}
+
+#todo {
+  height: 100vh;
+  background: $Very-Light-Gray url("./images/bg-desktop-light.jpg") no-repeat;
+  background-size: 100% 35%;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 40%;
+    max-width: 100%;
+    padding-top: 4rem;
+
+    .logo-theme {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+
+
+      #logo {
+        text-transform: uppercase;
+        font-weight: $font-weight-700;
+        letter-spacing: 10px;
+        color: #FFF;
+      }
+
+      #themeToggle {
+        background: url("./images/icon-moon.svg") no-repeat;
+        width: 26px;
+      }
+    }
+
+    #createNewTodo {
+      display: flex;
+      width: 100%;
+      background-color: #FFF;
+      border-radius: 5px;
+      padding: 1rem 1.5rem;
+      margin-top: 1.5rem;
+
+      #checkBTN {
+        -webkit-appearance: none;
+        width: 1.3rem;
+        height: 1.3rem;
+        background-color: #FFF;
+        border-radius: 50%;
+        vertical-align: middle;
+        border: 1px solid $Light-Grayish-Blue;
+        outline: none;
+        cursor: pointer;
+        margin-right: 1rem;
+
+        &:checked {
+          background: linear-gradient(130deg, #57ddff, #c058f3);
+        }
+      }
+
+      #todoText {
+        border: none;
+        outline: none;
+        font-size: 18px;
+        font-family: 'Josefin Sans', sans-serif;
+        width: 92%;
+
+        &::placeholder {
+          color: $Dark-Grayish-Blue;
+        }
+      }
+    }
+  }
 }

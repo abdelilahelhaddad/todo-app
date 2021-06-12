@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+/* Font Weight */
+/* Color */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 18px;
+}
+
+#todo {
+  height: 100vh;
+  background: #fafafa url("./images/bg-desktop-light.jpg") no-repeat;
+  background-size: 100% 35%;
+}
+
+#todo .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 auto;
+  width: 40%;
+  max-width: 100%;
+  padding-top: 4rem;
+}
+
+#todo .container .logo-theme {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+#todo .container .logo-theme #logo {
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 10px;
+  color: #FFF;
+}
+
+#todo .container .logo-theme #themeToggle {
+  background: url("./images/icon-moon.svg") no-repeat;
+  width: 26px;
+}
+
+#todo .container #createNewTodo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  background-color: #FFF;
+  border-radius: 5px;
+  padding: 1rem 1.5rem;
+  margin-top: 1.5rem;
+}
+
+#todo .container #createNewTodo #checkBTN {
+  -webkit-appearance: none;
+  width: 1.3rem;
+  height: 1.3rem;
+  background-color: #FFF;
+  border-radius: 50%;
+  vertical-align: middle;
+  border: 1px solid #d2d3db;
+  outline: none;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+
+#todo .container #createNewTodo #checkBTN:checked {
+  background: linear-gradient(130deg, #57ddff, #c058f3);
+}
+
+#todo .container #createNewTodo #todoText {
+  border: none;
+  outline: none;
+  font-size: 18px;
+  font-family: 'Josefin Sans', sans-serif;
+  width: 92%;
+}
+
+#todo .container #createNewTodo #todoText::-webkit-input-placeholder {
+  color: #9394a5;
+}
+
+#todo .container #createNewTodo #todoText:-ms-input-placeholder {
+  color: #9394a5;
+}
+
+#todo .container #createNewTodo #todoText::-ms-input-placeholder {
+  color: #9394a5;
+}
+
+#todo .container #createNewTodo #todoText::placeholder {
+  color: #9394a5;
+}
+/*# sourceMappingURL=style.css.map */
