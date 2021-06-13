@@ -50,11 +50,13 @@ body {
   font-weight: 700;
   letter-spacing: 10px;
   color: #FFF;
+  cursor: pointer;
 }
 
 #todo .container .logo-theme #themeToggle {
   background: url("./images/icon-moon.svg") no-repeat;
   width: 26px;
+  cursor: pointer;
 }
 
 #todo .container #createNewTodo {
@@ -68,21 +70,49 @@ body {
   margin-top: 1.5rem;
 }
 
-#todo .container #createNewTodo #checkBTN {
+#todo .container #createNewTodo .borderGradiant {
+  margin-right: 1rem;
+  padding: 1px;
+  position: relative;
+  background: #d2d3db;
+  border-radius: 50%;
+}
+
+#todo .container #createNewTodo .borderGradiant #checkBTN {
   -webkit-appearance: none;
   width: 1.3rem;
   height: 1.3rem;
   background-color: #FFF;
   border-radius: 50%;
   vertical-align: middle;
-  border: 1px solid #d2d3db;
   outline: none;
   cursor: pointer;
-  margin-right: 1rem;
 }
 
-#todo .container #createNewTodo #checkBTN:checked {
+#todo .container #createNewTodo .borderGradiant #checkBTN:checked {
   background: linear-gradient(130deg, #57ddff, #c058f3);
+  position: relative;
+}
+
+#todo .container #createNewTodo .borderGradiant #checkBTN:checked::after {
+  position: absolute;
+  content: "";
+  top: 26%;
+  left: 22%;
+  width: 11px;
+  height: 9px;
+  background: url("./images/icon-check.svg") no-repeat;
+}
+
+#todo .container #createNewTodo .borderGradiant:hover {
+  padding: 1px;
+  position: relative;
+  background: linear-gradient(130deg, #57ddff, #c058f3);
+  border-radius: 50%;
+}
+
+#todo .container #createNewTodo .borderGradiant:hover #checkBTN {
+  border: none;
 }
 
 #todo .container #createNewTodo #todoText {
@@ -126,32 +156,46 @@ body {
   border-bottom: 1px solid #e4e5f1;
 }
 
-#todo .container #todoCollection .todoItem #checkBTN {
+#todo .container #todoCollection .todoItem .borderGradiant {
+  margin-right: 1rem;
+  padding: 1px;
+  position: relative;
+  background: #d2d3db;
+  border-radius: 50%;
+}
+
+#todo .container #todoCollection .todoItem .borderGradiant #checkBTN {
   -webkit-appearance: none;
   width: 1.3rem;
   height: 1.3rem;
   background-color: #FFF;
   border-radius: 50%;
   vertical-align: middle;
-  border: 1px solid #d2d3db;
   outline: none;
   cursor: pointer;
-  margin-right: 1rem;
 }
 
-#todo .container #todoCollection .todoItem #checkBTN:checked {
+#todo .container #todoCollection .todoItem .borderGradiant #checkBTN:checked {
   background: linear-gradient(130deg, #57ddff, #c058f3);
   position: relative;
 }
 
-#todo .container #todoCollection .todoItem #checkBTN:checked::after {
+#todo .container #todoCollection .todoItem .borderGradiant #checkBTN:checked::after {
   position: absolute;
   content: "";
-  top: 25%;
-  left: 20%;
+  top: 26%;
+  left: 22%;
   width: 11px;
   height: 9px;
   background: url("./images/icon-check.svg") no-repeat;
+}
+
+#todo .container #todoCollection .todoItem .borderGradiant:hover {
+  background: linear-gradient(130deg, #57ddff, #c058f3);
+}
+
+#todo .container #todoCollection .todoItem .borderGradiant:hover #checkBTN {
+  border: none;
 }
 
 #todo .container #todoCollection .todoItem .todoItemText {
@@ -160,6 +204,17 @@ body {
   white-space: nowrap;
   overflow: hidden;
   color: #484b6a;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+#todo .container #todoCollection .todoItem:hover .borderGradiant {
+  background: linear-gradient(130deg, #57ddff, #c058f3);
+}
+
+#todo .container #todoCollection .todoItem:hover .borderGradiant #checkBTN {
+  border: none;
 }
 
 #todo .container #todoCollection .todoFilter {
@@ -174,8 +229,11 @@ body {
 
 #todo .container #todoCollection .todoFilter p {
   font-size: 14px;
-  cursor: pointer;
   color: #9394a5;
+}
+
+#todo .container #todoCollection .todoFilter .clearCompleted {
+  cursor: pointer;
 }
 
 #todo .container #todoCollection .todoFilter .filterTodos {
@@ -186,9 +244,12 @@ body {
 
 #todo .container #todoCollection .todoFilter .filterTodos p {
   padding: 0 8px;
-  font-size: 14px;
   cursor: pointer;
-  color: #9394a5;
+  font-weight: 700;
+}
+
+#todo .container #todoCollection .todoFilter .filterTodos p:hover {
+  color: #484b6a;
 }
 
 #todo .container #todoCollection .todoFilter .filterTodos .active {

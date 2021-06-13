@@ -64,11 +64,13 @@ body {
         font-weight: $font-weight-700;
         letter-spacing: 10px;
         color: #FFF;
+        cursor: pointer;
       }
 
       #themeToggle {
         background: url("./images/icon-moon.svg") no-repeat;
         width: 26px;
+        cursor: pointer;
       }
     }
 
@@ -80,20 +82,48 @@ body {
       padding: 1rem 1.5rem;
       margin-top: 1.5rem;
 
-      #checkBTN {
-        -webkit-appearance: none;
-        width: 1.3rem;
-        height: 1.3rem;
-        background-color: #FFF;
-        border-radius: 50%;
-        vertical-align: middle;
-        border: 1px solid $Light-Grayish-Blue;
-        outline: none;
-        cursor: pointer;
+      .borderGradiant {
         margin-right: 1rem;
+        padding: 1px;
+        position: relative;
+        background: $Light-Grayish-Blue;
+        border-radius: 50%;
 
-        &:checked {
+        #checkBTN {
+          -webkit-appearance: none;
+          width: 1.3rem;
+          height: 1.3rem;
+          background-color: #FFF;
+          border-radius: 50%;
+          vertical-align: middle;
+          outline: none;
+          cursor: pointer;
+
+          &:checked {
+            background: linear-gradient(130deg, #57ddff, #c058f3);
+            position: relative;
+
+            &::after {
+              position: absolute;
+              content: "";
+              top: 26%;
+              left: 22%;
+              width: 11px;
+              height: 9px;
+              background: url("./images/icon-check.svg") no-repeat;
+            }
+          }
+        }
+
+        &:hover {
+          padding: 1px;
+          position: relative;
           background: linear-gradient(130deg, #57ddff, #c058f3);
+          border-radius: 50%;
+
+          #checkBTN {
+            border: none;
+          }
         }
       }
 
@@ -122,30 +152,44 @@ body {
         padding: 1rem 1.5rem;
         border-bottom: 1px solid $Very-Light-Grayish-Blue;
 
-        #checkBTN {
-          -webkit-appearance: none;
-          width: 1.3rem;
-          height: 1.3rem;
-          background-color: #FFF;
-          border-radius: 50%;
-          vertical-align: middle;
-          border: 1px solid $Light-Grayish-Blue;
-          outline: none;
-          cursor: pointer;
+        .borderGradiant {
           margin-right: 1rem;
+          padding: 1px;
+          position: relative;
+          background: $Light-Grayish-Blue;
+          border-radius: 50%;
 
-          &:checked {
+          #checkBTN {
+            -webkit-appearance: none;
+            width: 1.3rem;
+            height: 1.3rem;
+            background-color: #FFF;
+            border-radius: 50%;
+            vertical-align: middle;
+            outline: none;
+            cursor: pointer;
+
+            &:checked {
+              background: linear-gradient(130deg, #57ddff, #c058f3);
+              position: relative;
+
+              &::after {
+                position: absolute;
+                content: "";
+                top: 26%;
+                left: 22%;
+                width: 11px;
+                height: 9px;
+                background: url("./images/icon-check.svg") no-repeat;
+              }
+            }
+          }
+
+          &:hover {
             background: linear-gradient(130deg, #57ddff, #c058f3);
-            position: relative;
 
-            &::after {
-              position: absolute;
-              content: "";
-              top: 25%;
-              left: 20%;
-              width: 11px;
-              height: 9px;
-              background: url("./images/icon-check.svg") no-repeat;
+            #checkBTN {
+              border: none;
             }
           }
         }
@@ -156,6 +200,17 @@ body {
           white-space: nowrap;
           overflow: hidden;
           color: $Very-Dark-Grayish-Blue;
+          align-self: center;
+        }
+
+        &:hover {
+          .borderGradiant {
+            background: linear-gradient(130deg, #57ddff, #c058f3);
+
+            #checkBTN {
+              border: none;
+            }
+          }
         }
       }
 
@@ -166,8 +221,11 @@ body {
 
         p {
           font-size: 14px;
-          cursor: pointer;
           color: $Dark-Grayish-Blue;
+        }
+
+        .clearCompleted {
+          cursor: pointer;
         }
 
         .filterTodos {
@@ -175,9 +233,12 @@ body {
 
           p {
             padding: 0 8px;
-            font-size: 14px;
             cursor: pointer;
-            color: $Dark-Grayish-Blue;
+            font-weight: $font-weight-700;
+
+            &:hover {
+              color: $Very-Dark-Grayish-Blue;
+            }
           }
 
           .active {
