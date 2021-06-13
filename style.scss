@@ -19,13 +19,13 @@ $Very-Dark-Grayish-Blue: hsl(235, 19%, 35%);
 
 //Dark Theme
 
-// $Very-Dark-Blue: hsl(235, 21%, 11%);
-// $Very-Dark-Desaturated-Blue: hsl(235, 24%, 19%);
-// $Light-Grayish-Blue: hsl(234, 39%, 85%);
-// $Light-Grayish-Blue-hover: hsl(236, 33%, 92%);
-// $Dark-Grayish-Blue: hsl(234, 11%, 52%);
-// $Very-Dark-Grayish-Blue: hsl(233, 14%, 35%);
-// $Very-Dark-Grayish-Blue: hsl(237, 14%, 26%);
+$Very-Dark-Blue: hsl(235, 21%, 11%);
+$Very-Dark-Desaturated-Blue: hsl(235, 24%, 19%);
+$Light-Grayish-Blue: hsl(234, 39%, 85%);
+$Light-Grayish-Blue-hover: hsl(236, 33%, 92%);
+$Dark-Grayish-Blue: hsl(234, 11%, 52%);
+$Very-Dark-Grayish-Blue1: hsl(233, 14%, 35%);
+$Very-Dark-Grayish-Blue2: hsl(237, 14%, 26%);
 
 *,
 *::after,
@@ -203,6 +203,12 @@ body {
           align-self: center;
         }
 
+        img {
+          margin-left: 1.5rem;
+          align-self: center;
+          cursor: pointer;
+        }
+
         &:hover {
           .borderGradiant {
             background: linear-gradient(130deg, #57ddff, #c058f3);
@@ -243,6 +249,10 @@ body {
 
           .active {
             color: $Bright-Blue;
+
+            &:hover {
+              color: $Bright-Blue;
+            }
           }
         }
       }
@@ -253,6 +263,143 @@ body {
       margin-top: 3rem;
       color: $Dark-Grayish-Blue;
       font-size: 14px;
+    }
+  }
+}
+
+#todo.dark {
+  background: $Very-Dark-Blue url("./images/bg-desktop-dark.jpg") no-repeat;
+  background-size: 100% 35%;
+
+  .container {
+    .logo-theme {
+
+      #themeToggle {
+        background: url("./images/icon-sun.svg") no-repeat;
+      }
+    }
+
+    #createNewTodo {
+      background-color: $Very-Dark-Desaturated-Blue;
+
+      .borderGradiant {
+        background: $Very-Dark-Grayish-Blue;
+
+        #checkBTN {
+          background-color: $Very-Dark-Desaturated-Blue;
+
+          &:checked {
+            background: linear-gradient(130deg, #57ddff, #c058f3);
+
+            &::after {
+              background: url("./images/icon-check.svg") no-repeat;
+            }
+          }
+        }
+
+        &:hover {
+          padding: 1px;
+          position: relative;
+          background: linear-gradient(130deg, #57ddff, #c058f3);
+          border-radius: 50%;
+
+          #checkBTN {
+            border: none;
+          }
+        }
+      }
+
+      #todoText {
+        background: $Very-Dark-Desaturated-Blue;
+        color: $Light-Grayish-Blue;
+
+        &::placeholder {
+          color: $Dark-Grayish-Blue;
+        }
+      }
+    }
+
+    #todoCollection {
+      background-color: $Very-Dark-Desaturated-Blue;
+      box-shadow: 0px 7px 25px -5px rgba($Very-Dark-Grayish-Blue2, 0.4);
+
+      .todoItem {
+        border-bottom: 1px solid $Very-Dark-Grayish-Blue;
+
+        .borderGradiant {
+          background: $Very-Dark-Grayish-Blue;
+
+          #checkBTN {
+            background-color: $Very-Dark-Desaturated-Blue;
+
+            &:checked {
+              background: linear-gradient(130deg, #57ddff, #c058f3);
+
+              &::after {
+                background: url("./images/icon-check.svg") no-repeat;
+              }
+            }
+          }
+
+          &:hover {
+            background: linear-gradient(130deg, #57ddff, #c058f3);
+
+            #checkBTN {
+              border: none;
+            }
+          }
+        }
+
+        .todoItemText {
+          color: $Light-Grayish-Blue;
+        }
+
+        &:hover {
+          .borderGradiant {
+            background: linear-gradient(130deg, #57ddff, #c058f3);
+
+            #checkBTN {
+              border: none;
+            }
+          }
+        }
+      }
+
+      .todoFilter {
+
+        p {
+          color: $Dark-Grayish-Blue;
+        }
+
+        .clearCompleted {
+          &:hover {
+            color: $Light-Grayish-Blue-hover
+          }
+        }
+
+        .filterTodos {
+          display: flex;
+
+          p {
+
+            &:hover {
+              color: $Light-Grayish-Blue-hover;
+            }
+          }
+
+          .active {
+            color: $Bright-Blue;
+
+            &:hover {
+              color: $Bright-Blue;
+            }
+          }
+        }
+      }
+    }
+
+    #reorderList {
+      color: $Very-Dark-Grayish-Blue1;
     }
   }
 }
