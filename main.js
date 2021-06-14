@@ -19,7 +19,7 @@ todoText.addEventListener('keypress', function (e) {
     <div class="borderGradiant">
     <input type="checkbox" name="checkBTN" id="checkBTN"></div>
     <p class="todoItemText">${todoTextValue}</p>
-    <img src="./images/icon-cross.svg" alt="">
+    <img class="crossIcon" src="./images/icon-cross.svg" alt="">
     `;
 
     todoCollection.appendChild(newTodoItem);
@@ -30,7 +30,7 @@ todoText.addEventListener('keypress', function (e) {
 
 //Delete a todo
 todoCollection.addEventListener('click', function (e) {
-  if (e.target.parentElement.classList.contains("todoItem")) {
+  if (e.target.classList.contains("crossIcon")) {
     e.target.parentElement.remove();
   }
 })
