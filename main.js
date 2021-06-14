@@ -27,3 +27,10 @@ todoText.addEventListener('keypress', function (e) {
     todoText.value = "";
   }
 });
+
+//Delete a todo
+todoCollection.addEventListener('click', function (e) {
+  if (e.target.parentElement.classList.contains("todoItem")) {
+    e.target.parentElement.remove();
+  }
+})
