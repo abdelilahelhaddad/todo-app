@@ -53,3 +53,11 @@ todoCollection.addEventListener('click', function (e) {
 todoCollection.addEventListener('change', function (e) {
   e.target.parentElement.parentElement.children[1].classList.toggle("completed");
 })
+
+//Clear completed todos
+clearCompleted.addEventListener("click", () => {
+  const completedTodos = document.querySelectorAll(".completed");
+  for (let i = 0; i < completedTodos.length; i++) {
+    completedTodos[i].parentElement.remove();
+  }
+})
