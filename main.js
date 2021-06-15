@@ -61,3 +61,38 @@ clearCompleted.addEventListener("click", () => {
     completedTodos[i].parentElement.remove();
   }
 })
+
+//Filter BY:
+const AlltodoItemText = document.querySelectorAll(".todoItemText");
+//1- All
+const filterByAll = document.querySelector(".filterByAll");
+
+filterByAll.addEventListener("click", () => {
+  for (let i = 0; i < AlltodoItemText.length; i++) {
+    if (AlltodoItemText[i].parentElement.style.display == "none") {
+      AlltodoItemText[i].parentElement.style.display = "flex";
+    }
+  }
+})
+
+//2- Active
+const filterByActive = document.querySelector(".filterByActive");
+
+filterByActive.addEventListener("click", () => {
+  for (let i = 0; i < AlltodoItemText.length; i++) {
+    if (AlltodoItemText[i].classList.contains("completed")) {
+      AlltodoItemText[i].parentElement.style.display = "none";
+    }
+  }
+})
+
+//3- Completed
+const filterByCompleted = document.querySelector(".filterByCompleted");
+
+filterByCompleted.addEventListener("click", () => {
+  for (let i = 0; i < AlltodoItemText.length; i++) {
+    if (!AlltodoItemText[i].classList.contains("completed")) {
+      AlltodoItemText[i].parentElement.style.display = "none";
+    }
+  }
+})
