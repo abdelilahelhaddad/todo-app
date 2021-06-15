@@ -62,7 +62,7 @@ clearCompleted.addEventListener("click", () => {
   }
 })
 
-//Filter BY:
+//Filter Todo BY:
 const AlltodoItemText = document.querySelectorAll(".todoItemText");
 //1- All
 const filterByAll = document.querySelector(".filterByAll");
@@ -96,3 +96,9 @@ filterByCompleted.addEventListener("click", () => {
     }
   }
 })
+
+new Sortable(todoCollection, {
+  animation: 150,
+  ghostClass: 'purpple-background-class',
+  filter: '.todoFilter',
+});
