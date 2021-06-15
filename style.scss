@@ -203,6 +203,11 @@ body {
           align-self: center;
         }
 
+        .completed {
+          color: $Light-Grayish-Blue;
+          text-decoration: line-through;
+        }
+
         img {
           margin-left: 1.5rem;
           align-self: center;

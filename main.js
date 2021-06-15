@@ -4,6 +4,9 @@ const todoText = document.querySelector("#todoText");
 const todoCollection = document.querySelector("#todoCollection");
 const todoItem = document.querySelector(".todoItem");
 const itemsLeft = document.querySelector(".itemsLeft");
+const todoItemText = document.querySelector(".todoItemText");
+const checkBTN = document.querySelector("#checkBTN");
+const clearCompleted = document.querySelector(".clearCompleted");
 
 //Light and Dark theme toggle
 themeToggle.addEventListener("click", () => {
@@ -44,4 +47,9 @@ todoCollection.addEventListener('click', function (e) {
     e.target.parentElement.remove();
   }
   leftItems();
+})
+
+//Completed todo
+todoCollection.addEventListener('change', function (e) {
+  e.target.parentElement.parentElement.children[1].classList.toggle("completed");
 })

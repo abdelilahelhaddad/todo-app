@@ -209,6 +209,11 @@ body {
       align-self: center;
 }
 
+#todo .container #todoCollection .todoItem .completed {
+  color: #cacde8;
+  text-decoration: line-through;
+}
+
 #todo .container #todoCollection .todoItem img {
   margin-left: 1.5rem;
   -ms-flex-item-align: center;
