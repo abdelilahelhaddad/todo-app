@@ -75,6 +75,9 @@ filterByAll.addEventListener("click", () => {
       AlltodoItemText[i].parentElement.style.display = "flex";
     }
   }
+  filterByAll.classList.add("active");
+  filterByActive.classList.remove("active");
+  filterByCompleted.classList.remove("active");
 })
 //MObile
 const filterByAllMobile = document.querySelector(".filterByAllMobile");
@@ -85,6 +88,9 @@ filterByAllMobile.addEventListener("click", () => {
       AlltodoItemText[i].parentElement.style.display = "flex";
     }
   }
+  filterByAllMobile.classList.add("active");
+  filterByActiveMobile.classList.remove("active");
+  filterByCompletedMobile.classList.remove("active");
 })
 
 //2- Active
@@ -97,6 +103,9 @@ filterByActive.addEventListener("click", () => {
       AlltodoItemText[i].parentElement.style.display = "none";
     }
   }
+  filterByAll.classList.remove("active");
+  filterByActive.classList.add("active");
+  filterByCompleted.classList.remove("active");
 })
 //MObile
 const filterByActiveMobile = document.querySelector(".filterByActiveMobile");
@@ -107,6 +116,9 @@ filterByActiveMobile.addEventListener("click", () => {
       AlltodoItemText[i].parentElement.style.display = "none";
     }
   }
+  filterByAllMobile.classList.remove("active");
+  filterByActiveMobile.classList.add("active");
+  filterByCompletedMobile.classList.remove("active");
 })
 
 //3- Completed
@@ -119,6 +131,9 @@ filterByCompleted.addEventListener("click", () => {
       AlltodoItemText[i].parentElement.style.display = "none";
     }
   }
+  filterByAll.classList.remove("active");
+  filterByActive.classList.remove("active");
+  filterByCompleted.classList.add("active");
 })
 //MObile
 const filterByCompletedMobile = document.querySelector(".filterByCompletedMobile");
@@ -129,6 +144,9 @@ filterByCompletedMobile.addEventListener("click", () => {
       AlltodoItemText[i].parentElement.style.display = "none";
     }
   }
+  filterByAllMobile.classList.remove("active");
+  filterByActiveMobile.classList.remove("active");
+  filterByCompletedMobile.classList.add("active");
 })
 
 new Sortable(todoCollection, {
