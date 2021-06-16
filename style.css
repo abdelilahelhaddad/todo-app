@@ -273,11 +273,70 @@ body {
   color: #3a7bfd;
 }
 
+@media screen and (max-width: 768px) {
+  #todo .container #todoCollection .todoFilter .filterTodos {
+    display: none;
+  }
+}
+
+#todo .container .filterTodosMobile {
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #FFF;
+  border-radius: 5px;
+  margin-top: 1.2rem;
+  padding: 1rem 1.5rem;
+}
+
+#todo .container .filterTodosMobile p {
+  padding: 0 8px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 14px;
+  color: #777a92;
+}
+
+#todo .container .filterTodosMobile p:hover {
+  color: #484b6a;
+}
+
+#todo .container .filterTodosMobile .active {
+  color: #3a7bfd;
+}
+
+#todo .container .filterTodosMobile .active:hover {
+  color: #3a7bfd;
+}
+
+@media screen and (max-width: 768px) {
+  #todo .container .filterTodosMobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-shadow: 0px 7px 25px -5px rgba(72, 75, 106, 0.4);
+            box-shadow: 0px 7px 25px -5px rgba(72, 75, 106, 0.4);
+  }
+}
+
 #todo .container #reorderList {
   text-align: center;
   margin-top: 3rem;
   color: #777a92;
   font-size: 14px;
+}
+
+@media screen and (max-width: 768px) {
+  #todo .container {
+    width: 85%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #todo {
+    background: #fafafa url("./images/bg-mobile-light.jpg") no-repeat;
+  }
 }
 
 #todo.dark {
@@ -413,7 +472,45 @@ body {
   color: #3a7bfd;
 }
 
+@media screen and (max-width: 768px) {
+  #todo.dark .container #todoCollection .todoFilter .filterTodos {
+    display: none;
+  }
+}
+
+#todo.dark .container .filterTodosMobile {
+  background: #25273c;
+}
+
+#todo.dark .container .filterTodosMobile p:hover {
+  color: #e4e5f1;
+}
+
+#todo.dark .container .filterTodosMobile .active {
+  color: #3a7bfd;
+}
+
+#todo.dark .container .filterTodosMobile .active:hover {
+  color: #3a7bfd;
+}
+
+@media screen and (max-width: 768px) {
+  #todo.dark .container .filterTodosMobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-shadow: 0px 7px 25px -5px rgba(72, 75, 106, 0.4);
+            box-shadow: 0px 7px 25px -5px rgba(72, 75, 106, 0.4);
+  }
+}
+
 #todo.dark .container #reorderList {
   color: #4d5066;
+}
+
+@media screen and (max-width: 768px) {
+  #todo.dark {
+    background: #161722 url("./images/bg-mobile-dark.jpg") no-repeat;
+  }
 }
 /*# sourceMappingURL=style.css.map */
