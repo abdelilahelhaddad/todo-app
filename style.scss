@@ -315,6 +315,7 @@ body {
 
   @media screen and (max-width:768px) {
     background: $Very-Light-Gray url("./images/bg-mobile-light.jpg") no-repeat;
+    background-size: 100% 35%;
   }
 }
 
@@ -484,5 +485,6 @@ body {
 
   @media screen and (max-width:768px) {
     background: $Very-Dark-Blue url("./images/bg-mobile-dark.jpg") no-repeat;
+    background-size: 100% 35%;
   }
 }

@@ -64,7 +64,9 @@ clearCompleted.addEventListener("click", () => {
 
 //Filter Todo BY:
 const AlltodoItemText = document.querySelectorAll(".todoItemText");
+
 //1- All
+//Desktop
 const filterByAll = document.querySelector(".filterByAll");
 
 filterByAll.addEventListener("click", () => {
@@ -74,8 +76,19 @@ filterByAll.addEventListener("click", () => {
     }
   }
 })
+//MObile
+const filterByAllMobile = document.querySelector(".filterByAllMobile");
+
+filterByAllMobile.addEventListener("click", () => {
+  for (let i = 0; i < AlltodoItemText.length; i++) {
+    if (AlltodoItemText[i].parentElement.style.display == "none") {
+      AlltodoItemText[i].parentElement.style.display = "flex";
+    }
+  }
+})
 
 //2- Active
+//Desktop
 const filterByActive = document.querySelector(".filterByActive");
 
 filterByActive.addEventListener("click", () => {
@@ -85,11 +98,32 @@ filterByActive.addEventListener("click", () => {
     }
   }
 })
+//MObile
+const filterByActiveMobile = document.querySelector(".filterByActiveMobile");
+
+filterByActiveMobile.addEventListener("click", () => {
+  for (let i = 0; i < AlltodoItemText.length; i++) {
+    if (AlltodoItemText[i].classList.contains("completed")) {
+      AlltodoItemText[i].parentElement.style.display = "none";
+    }
+  }
+})
 
 //3- Completed
+//Desktop
 const filterByCompleted = document.querySelector(".filterByCompleted");
 
 filterByCompleted.addEventListener("click", () => {
+  for (let i = 0; i < AlltodoItemText.length; i++) {
+    if (!AlltodoItemText[i].classList.contains("completed")) {
+      AlltodoItemText[i].parentElement.style.display = "none";
+    }
+  }
+})
+//MObile
+const filterByCompletedMobile = document.querySelector(".filterByCompletedMobile");
+
+filterByCompletedMobile.addEventListener("click", () => {
   for (let i = 0; i < AlltodoItemText.length; i++) {
     if (!AlltodoItemText[i].classList.contains("completed")) {
       AlltodoItemText[i].parentElement.style.display = "none";

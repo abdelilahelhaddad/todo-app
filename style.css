@@ -336,6 +336,7 @@ body {
 @media screen and (max-width: 768px) {
   #todo {
     background: #fafafa url("./images/bg-mobile-light.jpg") no-repeat;
+    background-size: 100% 35%;
   }
 }
 
@@ -511,6 +512,7 @@ body {
 @media screen and (max-width: 768px) {
   #todo.dark {
     background: #161722 url("./images/bg-mobile-dark.jpg") no-repeat;
+    background-size: 100% 35%;
   }
 }
 /*# sourceMappingURL=style.css.map */
